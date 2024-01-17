@@ -4,6 +4,7 @@ const list = ["One","Two","Three","Four"]
 function App()
 
 {
-    return <div><Hello/><List items={list} heading="Numbers"/></div> ;
+    return <div><Hello/><List items={list} heading="Numbers" onSelect={(items:string)=>{console.log(items);
+    }}/></div> ;
 }
 export default App;

@@ -2,9 +2,10 @@ import {useState}from 'react'
 interface ListProps
 {
     items : string[],
-    heading : string
+    heading : string,
+    onSelect : (items:string)=>void;
 }
-function List({items,heading}:ListProps){
+function List({items,heading,onSelect}:ListProps){
     const [select,setSelect] = useState(-1)
     return (
         <>
@@ -18,7 +19,7 @@ function List({items,heading}:ListProps){
         </ul>
         <h2>{heading}</h2>
         <ul className="list-group">
-            {items.map((items,index)=><li className={(select === index ) ? "list-group-item active":"list-group-item" } key={items} onClick={()=>{setSelect(index)}}>{items} </li>)}
+            {items.map((items,index)=><li className={(select === index ) ? "list-group-item active":"list-group-item" } key={items} onClick={()=>{setSelect(index);onSelect(items)} } >{items} </li>)}
         </ul>
         </>
     );
