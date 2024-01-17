@@ -13,7 +13,8 @@ const SecondApp = () => {
         This is Second App
         { visible && <LoginMessage msg={success} style={login_style}  onClick={()=>setVisible(false)}></LoginMessage> }
         <LoginButton color="success" children="Log In" onClick={()=>setVisible(true)}/>
-        <br></br>
+        <br>
+        </br>
         { outVisible && <LoginMessage msg={outSuccess} style={logout_style} onClick={()=>setOutVisible(false)}></LoginMessage> }
         <LoginButton color="danger" children="Log Out" onClick={()=>setOutVisible(true)}></LoginButton>
     </div>

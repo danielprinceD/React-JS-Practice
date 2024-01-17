@@ -3,14 +3,15 @@ interface ListProps
 {
     items : string[],
     heading : string,
-    onSelect : (items:string)=>void;
+    onSelect : (items:string)=>void,
+    onStyle : string;
 }
-function List({items,heading,onSelect}:ListProps){
+function List({items,heading,onSelect,onStyle}:ListProps){
     const [select,setSelect] = useState(-1)
     return (
         <>
         <h2>This is a List Group </h2>
-        <ul className="list-group">
+        <ul className={"list-group"+onStyle}>
             <li className="list-group-item">Data 1</li>
             <li className="list-group-item">Data 2</li>
             <li className="list-group-item">Data 3</li>
