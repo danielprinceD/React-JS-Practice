@@ -1,7 +1,10 @@
 import {useState}from 'react'
-const list = ["One","Two","Three","Four"]
-
-function List(){
+interface ListProps
+{
+    items : string[],
+    heading : string
+}
+function List({items,heading}:ListProps){
     const [select,setSelect] = useState(-1)
     return (
         <>
@@ -13,9 +16,9 @@ function List(){
             <li className="list-group-item">Data 4</li>
             <li className="list-group-item">Data 5</li>
         </ul>
-        <h2>List of Items</h2>
+        <h2>{heading}</h2>
         <ul className="list-group">
-            {list.map((items,index)=><li className={(select === index ) ? "list-group-item active":"list-group-item" } key={items} onClick={()=>{setSelect(index)}}>{items} </li>)}
+            {items.map((items,index)=><li className={(select === index ) ? "list-group-item active":"list-group-item" } key={items} onClick={()=>{setSelect(index)}}>{items} </li>)}
         </ul>
         </>
     );
