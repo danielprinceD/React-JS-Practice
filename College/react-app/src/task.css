@@ -1,0 +1,6 @@
+.task1 {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  place-content: center;
+}

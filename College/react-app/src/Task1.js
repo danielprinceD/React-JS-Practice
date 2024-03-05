@@ -19,9 +19,15 @@ export const Task1 = () => {
         <br />
         <h2>Count --- {count} </h2>
         <div className="task1">
-          <button onClick={Increment}>Increment</button>
-          <button onClick={Decrement}>Decrement</button>
-          <button onClick={reset}>Reset</button>
+          <button className="btn btn-success" onClick={Increment}>
+            Increment
+          </button>
+          <button className="btn btn-danger" onClick={Decrement}>
+            Decrement
+          </button>
+          <button className="btn btn-secondary" onClick={reset}>
+            Reset
+          </button>
         </div>
       </center>
     </div>

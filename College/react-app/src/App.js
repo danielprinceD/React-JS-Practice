@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 let products = ["apple", "orange", "mango"];
 function App() {
   const [count, setCount] = useState(0);
