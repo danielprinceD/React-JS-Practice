@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Task1 } from "./Task1";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Task1 />);
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
