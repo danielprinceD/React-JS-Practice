@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  gap: 10px;
+  place-content: center;
+  font-size: larger;
+  font-weight: bolder;
+}
+.nav a {
+  text-decoration: none;
+}
+.nav a:hover {
+}
