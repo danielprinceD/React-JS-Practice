@@ -1,0 +1,42 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 20px;
+}
+.head-center-container {
+  display: flex;
+}
+.head-center-container {
+  display: flex;
+  padding: 10px 0 0 0;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.head-logo img {
+  width: 70px;
+  aspect-ratio: 1 / 0.9;
+  border-radius: 50%;
+}
+.head-right-container img {
+  width: 60px;
+  border-radius: 50%;
+}
+.btn-container button {
+  border-radius: 20px;
+  color: black;
+  border: 1px solid red;
+}
+.head-right-container {
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  padding: 0px 20px;
+  border-radius: 50px;
+}
+.head-right-container a {
+  text-decoration: none;
+}

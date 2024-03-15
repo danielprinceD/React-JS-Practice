@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": "5f33",
+      "username": "newUser",
+      "password": "123",
+      "email": "abinesh@gmail.com"
+    },
+    {
+      "id": "df37",
+      "username": "newUser",
+      "password": "123",
+      "email": "abinesh@gmail.com"
+    },
+    {
+      "id": "a133",
+      "username": "123",
+      "password": "123",
+      "email": "daniel@gm.com"
+    },
+    {
+      "id": "da4c",
+      "username": "123",
+      "password": "123",
+      "email": "daniel@gm.com"
+    },
+    {
+      "id": "98f7",
+      "username": "daniel",
+      "password": "123",
+      "email": "d.danielprince2003@gmail.com"
+    },
+    {
+      "id": "6e7c",
+      "username": "newuser",
+      "password": "123",
+      "email": "d.danielprince2003@gmail.com"
+    },
+    {
+      "id": "aabc",
+      "username": "123",
+      "password": "123",
+      "email": "daniel@gm.com"
+    },
+    {
+      "id": "42b5",
+      "username": "123",
+      "password": "123",
+      "email": "d.danielprince2003@gmail.com"
+    },
+    {
+      "id": "381c",
+      "username": "123",
+      "password": "123",
+      "email": "daniel@gm.com"
+    },
+    {
+      "id": "f9b3",
+      "username": "123",
+      "password": "123",
+      "email": "daniel@gm.com"
+    },
+    {
+      "id": "0853",
+      "username": "123",
+      "password": "123",
+      "email": "daniel@gm.com"
+    },
+    {
+      "id": "88b4",
+      "username": "123",
+      "password": "123",
+      "email": "daniel@gm.com"
+    },
+    {
+      "id": "15e4",
+      "username": "123",
+      "password": "123",
+      "email": "daniel@gm.com"
+    },
+    {
+      "id": "8f90",
+      "username": "123",
+      "password": "123",
+      "email": "d.danielprince2003@gmail.com"
+    },
+    {
+      "id": "7235",
+      "username": "123",
+      "password": "123",
+      "email": "github@gmail.com"
+    },
+    {
+      "id": "b54b",
+      "username": "123",
+      "password": "123",
+      "email": "github@gmail.com"
+    }
+  ]
+}

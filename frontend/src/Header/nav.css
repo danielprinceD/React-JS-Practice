@@ -1,0 +1,12 @@
+.navigation-container {
+  display: flex;
+  gap: 20px;
+  background-color: transparent;
+  width: 400px;
+  justify-content: space-around;
+}
+.navigation-container a {
+  background-color: transparent;
+  height: 40px;
+  border-radius: 20px;
+}
