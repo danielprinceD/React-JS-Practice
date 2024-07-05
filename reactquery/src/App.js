@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { waitFor } from "@testing-library/react";
 const data = [
   {
@@ -21,14 +21,15 @@ const addData = {
   age: 30,
 };
 
-function wait(time) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject();
-    }, time);
-  });
-}
 const App = () => {
+  function wait(time) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        return resolve();
+      }, time);
+    });
+  }
+  const queryClient = useQueryClient();
   const detailsQuery = useQuery({
     queryKey: ["details"],
     queryFn: () =>
@@ -36,11 +37,20 @@ const App = () => {
         .then(() => [...data])
         .catch(() => console.log("error")),
   });
+  const detailsMutation = useMutation({
+    mutationKey: ["detailMutation"],
+    mutationFn: (newData) => {
+      return wait(2000).then(() => {
+        data.push(newData);
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(["details"]);
+    },
+  });
   if (detailsQuery.isLoading) return <div>Loading</div>;
   if (detailsQuery.isError) return <div>Not found</div>;
 
-
-  
   return (
     <div>
       {detailsQuery.data.map((e) => (
@@ -49,7 +59,15 @@ const App = () => {
           <br />
         </h2>
       ))}
-      <button>Add New Person</button>
+
+      <button
+        disabled={detailsMutation.isPending}
+        onClick={() => {
+          detailsMutation.mutate(addData);
+        }}
+      >
+        Add New Person
+      </button>
     </div>
   );
 };
