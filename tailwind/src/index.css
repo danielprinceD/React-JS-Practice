@@ -4,13 +4,13 @@
 
 @layer base {
   h1 {
-    @apply text-blue-400;
+    @apply text-blue-400 card;
   }
 }
 
 @layer components {
   .card {
-    background-color: red;
+    background-color: yellow;
     padding: 50px;
     border-radius: 50px;
   }

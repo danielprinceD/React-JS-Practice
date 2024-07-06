@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 
 const App = () => {
+  const [color, setColor] = useState("white");
   return (
     <div className="flex justify-center flex-col gap-8">
       <button className="bg-sky-500 p-10 w-40  self-center hover:bg-sky-700 transition ease-linear hover:translate-x-4 rounded-2xl">
@@ -63,8 +64,25 @@ const App = () => {
           <li>Hello</li>
           <li>Hello</li>
           <li>Hello</li>
-          <h1 className="card">Hello</h1>
+          <h1 className="">Hello</h1>
         </ul>
+      </div>
+      <div className="self-center">
+        <h2 className="text-[30px] underline underline-offset-[6px] decoration-wavy py-[20px] bg-[#531dbe] text-[#fff] px-[50px] rounded-[20px]">
+          This is Arbitrary Value
+        </h2>
+      </div>
+      <div className="self-center ">
+        <div className={"bg-" + color + ` h-[50px] my-2`}></div>
+        <input
+          type="text"
+          className="border-[3px] w-3/5 border-blue-400"
+          onChange={(e) => {
+            setColor(e.target.value);
+          }}
+          value={color}
+          name="color"
+        />
       </div>
     </div>
   );
