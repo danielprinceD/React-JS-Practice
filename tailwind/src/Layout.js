@@ -33,6 +33,38 @@ const Layout = () => {
             dicta architecto pariatur ea.
           </div>
         </div>
+        <div className="container mt-3 mx-auto">
+          <div className="text-center text-2xl">Position</div>
+          <div className="relative bg-red-500 h-16 ">
+            <pre className="text-center text-white">Relative</pre>
+            <div className="absolute h-8 bg-green-400 w-32 text-center text-white -left-4 hover:left-0 transition-all duration-700 ease-linear">
+              Absolute
+            </div>
+          </div>
+        </div>
+        <div className="container mt-20 mx-auto">
+          <div className="bg-purple-500 w-64 h-16 rounded-lg flex justify-center">
+            <div className="bg-purple-300 h-12 w-8 self-center rounded-lg content-center text-center z-50 border ">
+              1
+            </div>
+            <div className=" border bg-purple-300 h-12 w-8 self-center rounded-lg content-center text-center z-30">
+              2
+            </div>
+            <div className="bg-purple-300 h-12 w-8 self-center rounded-lg content-center text-center z-20">
+              3
+            </div>
+            <div className="bg-purple-300 h-12 w-8 self-center rounded-lg content-center text-center z-10">
+              4
+            </div>
+          </div>
+        </div>
+        <div className="bg-red-400 mt-2 container w-screen mx-auto h-64">
+          <img
+            src="https://picsum.photos/id/237/536"
+            alt=""
+            className="h-64 object-center transition-all hover:object-none duration-7000 ease-linear"
+          />
+        </div>
       </div>
     </>
   );
