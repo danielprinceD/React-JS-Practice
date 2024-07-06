@@ -13,6 +13,11 @@ const Animation = () => {
             Scale
           </button>
         </div>
+        <img
+          src="https://picsum.photos/id/237/536"
+          className="origin-bottom-left transition  hover:-rotate-12 h-64"
+          alt=""
+        />
       </div>
     </div>
   );
