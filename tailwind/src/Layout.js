@@ -62,12 +62,12 @@ const Layout = () => {
           <img
             src="https://picsum.photos/id/237/536"
             alt=""
-            className="h-64 w-64 object-center transition-all hover:object-none duration-7000 ease-linear"
+            className="h-64 saturate-150  w-64 object-center transition-all hover:object-none duration-7000 ease-linear"
           />
           <img
             src="https://picsum.photos/id/237/536"
             alt=""
-            className="h-64 hover:blur-none blur-sm w-64 object-center transition-all  duration-7000 ease-linear"
+            className="h-64  hover:blur-none blur-sm w-64 object-center transition-all  duration-7000 ease-linear"
           />
         </div>
       </div>

@@ -17,8 +17,11 @@ const Borders = () => {
       <div className="container m-4">
         <div
           className="bg-white p-3 justify-center rounded-lg shadow-md
-        shadow-black flex flex-col gap-3 w-32 h-32"
+        shadow-black flex flex-col gap-3 w-64 "
         >
+          <div className="">
+            <img src="https://picsum.photos/id/237/536" alt="" />
+          </div>
           <div className="text-center">Hello</div>
           <div className="bg-red-500  text-white py-1 rounded-md active:bg-red-400 text-center">
             Button
