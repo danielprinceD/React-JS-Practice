@@ -6,10 +6,12 @@ import MyGrid from "./MyGrid";
 import Layout from "./Layout";
 import Borders from "./Borders";
 import Animation from "./Animation";
+import DesignSystem from "./DesignSystem";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
+    <DesignSystem />
     <Animation />
     <Borders />
     <Layout />
