@@ -13,11 +13,19 @@ const Animation = () => {
             Scale
           </button>
         </div>
-        <img
-          src="https://picsum.photos/id/237/536"
-          className="origin-bottom-left transition  hover:-rotate-12 h-64"
-          alt=""
-        />
+        <div className="container flex gap-2 m-3">
+          <img
+            src="https://picsum.photos/id/237/536"
+            className="origin-bottom-left transition  hover:-rotate-12 h-64"
+            alt=""
+            title="Transform"
+          />
+          <img
+            src="https://picsum.photos/id/237/536"
+            className="origin-bottom-left transition -skew-y-12 hover:-skew-y-0 h-64"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );
