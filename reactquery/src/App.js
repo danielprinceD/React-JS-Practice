@@ -1,7 +1,9 @@
 import React from "react";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+
 import { waitFor } from "@testing-library/react";
+
 const data = [
   {
     id: 1,
@@ -36,6 +38,7 @@ const App = () => {
       wait(2000)
         .then(() => [...data])
         .catch(() => console.log("error")),
+    staleTime: 5000,
   });
   const detailsMutation = useMutation({
     mutationKey: ["detailMutation"],
@@ -48,7 +51,7 @@ const App = () => {
       queryClient.invalidateQueries(["details"]);
     },
   });
-  if (detailsQuery.isLoading) return <div>Loading</div>;
+  if (detailsQuery.isLoading) return <h1>Loading</h1>;
   if (detailsQuery.isError) return <div>Not found</div>;
 
   return (
@@ -63,6 +66,7 @@ const App = () => {
       <button
         disabled={detailsMutation.isPending}
         onClick={() => {
+          console.log();
           detailsMutation.mutate(addData);
         }}
       >
