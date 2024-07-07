@@ -3,11 +3,7 @@ import React from "react";
 const Add = () => {
   return (
     <div>
-      <button
-        onClick={() => {
-          setCount((p) => p + 1);
-        }}
-      >
+      <button className="btn btn-primary" onClick={() => {}}>
         Add
       </button>
     </div>
