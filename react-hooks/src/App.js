@@ -2,12 +2,12 @@ import React, { useReducer } from "react";
 
 const App = () => {
   const reducer = (state, action) => {
-    switch (action) {
+    switch (action.type) {
       case "INCREASE":
-        return state + 1;
+        return state + action.value;
 
       case "DECREASE":
-        return state - 1;
+        return state - action.value;
     }
   };
   const [count, dispatch] = useReducer(reducer, 0);
@@ -15,8 +15,12 @@ const App = () => {
     <>
       <div>
         <h2>Use Reduce - {count}</h2>
-        <button onClick={() => dispatch("INCREASE")}>+</button>
-        <button onClick={() => dispatch("DECREASE")}>-</button>
+        <button onClick={() => dispatch({ type: "INCREASE", value: 2 })}>
+          +
+        </button>
+        <button onClick={() => dispatch({ type: "DECREASE", value: 2 })}>
+          -
+        </button>  
       </div>
     </>
   );
